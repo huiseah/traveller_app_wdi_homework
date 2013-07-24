@@ -17,6 +17,7 @@ development:
   encoding: unicode
   database: travellerapp_development
   pool: 5
+  host: localhost
   username: willybuttvangelderen
   password:
 
