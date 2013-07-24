@@ -17,9 +17,10 @@
     };
 
   var add_marker = function (lat, long, name, icon) {
+
     var latlng = new google.maps.LatLng(lat, long);
-    var marker = new google.maps.Marker({position: latlng, map: map, name: name, icon: image});
-    // var image = 'images/coffee.png';
+    var marker = new google.maps.Marker({position: latlng, icon: image, map: map, name: name});
+    var image = 'images/coffee.png';
   };
 
 
