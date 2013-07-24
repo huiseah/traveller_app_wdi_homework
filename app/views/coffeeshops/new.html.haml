@@ -1,0 +1,17 @@
+%div.row
+  %div.small-3.columns
+    %div.controls
+      %div.new
+        = button_tag 'New Coffeeshop', :id => 'new_coffeeshop', :class => 'button radius success tiny'
+      %div.taskform.invisible
+        = form_tag do
+          = label_tag 'Shop Name'
+          = text_field_tag 'name'
+          = label_tag 'Address'
+          = text_field_tag 'address'
+          = hidden_field_tag 'user_id'
+
+          = link_to('Clear', '#', :id=>'clear_task', :class => 'button radius tiny alert')
+          = submit_tag 'Create', :id => 'create_task', :class => 'button radius tiny'
+          = submit_tag 'Submit', :id => 'update_task', :class => 'button radius success tiny'
+  %div.small-9.columns

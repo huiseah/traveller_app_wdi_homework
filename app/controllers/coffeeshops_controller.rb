@@ -1,15 +1,17 @@
 class CoffeeshopsController < ApplicationController
-  before_filter :ensure_logged_in
+  #   before_filter :ensure_logged_in
 
   def index
-    @coffeeshops = @auth.coffeeshops
+    @coffeeshops = Coffeeshop.all
+    # @users = User.all
   end
+
 
   def create
   	name = params[:name]
   	address = params[:address]
-    user_id = params[:user_id]
-  	
+      user_id = params[:user_id]
+
   	coffeeshop = Coffeeshop.create(:name => name, :address => address, :user_id => user_id)
   	@auth.coffeeshops << coffeeshop
 

@@ -6,17 +6,8 @@
       </ul>
       <section class="top-bar-section">
         <ul class="left">
-          <li><a href="/">Home</a></li>
-          <li><a href="/users/new">Create User</a></li>
-					<li><a href="/users">See All Users</a></li>
-					<% if @auth.present? %>
-            <li><a href="/coffeeshops">Coffeeshops</a></li>
-          <% end %>
+          <li class="right"><%== intellinav %></li>
 
-        </ul>
-        <ul class="right">
-          <li><%= intellinav %></li>
-        </ul>
       </section>
     </nav>
   </div>

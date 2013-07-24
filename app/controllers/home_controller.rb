@@ -1,4 +1,7 @@
 class HomeController < ApplicationController
 	def index
-	end
+    @coffeeshops = Coffeeshop.all
+    # @users = User.all
+  end
+
 end
