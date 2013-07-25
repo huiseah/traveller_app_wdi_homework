@@ -4,6 +4,7 @@
   - @coffeeshops.each do |coffeeshop|
     %script
       = "$(document).ready(function () {"
+
       = "add_marker(#{coffeeshop.latitude}, #{coffeeshop.longitude}, '#{coffeeshop.name}', '#{coffeeshop.address}');"
       = "});"
 %div#map
