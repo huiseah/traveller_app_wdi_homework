@@ -40,7 +40,6 @@ var map;
       map = new google.maps.Map(canvas, mapOptions);
   };
 
-
   var add_marker = function (lat, long, name, icon) {
       var image = '/images/coffee.png';
       var latlng = new google.maps.LatLng(lat, long);
@@ -48,48 +47,49 @@ var map;
           position: latlng,
           icon: image,
           map: map,
-          name: name
-      });
+          name: name});
+
+      //Adding Info Window ////////
+      // var address = ({" "})
+      // var coffeeshopname =  ({" "})
+
+      // var coffee_pop =
+      //    '<div id="content">'+
+      //     '<div id="siteNotice">'+
+      //     '</div>'+
+      //     '<h1 id="firstHeading" class="firstHeading"><script>
+      //       $(document).ready(function () {
+      //         '#{coffeeshop.name}');
+      //         });
+      //     </script>
+      //     </h1>'+
+      //     '<div id="bodyContent">'+
+      //     '<p>
+
+      //     <script>
+      //       $(document).ready(function () {
+      //         '#{coffeeshop.address}');
+      //       });
+      //     </script>
+
+      //     </p>'+
+      //     '</div>'+
+      //     '</div>';
+
+      // var infowindow = new google.maps.InfoWindow({
+      //     content: coffee_pop,
+      //     maxWidth: 200
+      //     });
+
+      //closing Info Window ////////
 
   };
-
-  //INFO WINDOW===
-
-  // var coffee_pop =
-
-
-  //   '<div id="content">' +
-  //     '<div id="siteNotice">' +
-  //     '</div>' +
-  //     '<h1 id="firstHeading" class="firstHeading">
-
-
-  //     // INSERT COFFEE NAME HERE
-
-  //     </h1>' +
-  //     '<div id="bodyContent">' +
-  //     '<p>
-
-  //     // INSERT COFFEE ADDRESS HERE
-
-  //     </p>' +
-  //     '</div>' +
-  //     '</div>';
-
-  // var infowindow = new google.maps.InfoWindow({
-  //     content: coffee_pop,
-  //     maxWidth: 200
-  // });
-
-
-
 
 
   $(document).ready(function () {
 
       display_map(-33.8942659, 151.2654561, 15);
       add_marker();
-      // infowindow();
   });
 
 
