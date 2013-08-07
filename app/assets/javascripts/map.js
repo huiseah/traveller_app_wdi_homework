@@ -75,7 +75,8 @@ var add_marker = function (lat, long, name, address) {
 
       var infowindow = new google.maps.InfoWindow({
       content: contentString,
-      maxWidth: 220
+      maxWidth: 220,
+      styles: popup
        });
 
        google.maps.event.addListener(marker, 'click', function() {
